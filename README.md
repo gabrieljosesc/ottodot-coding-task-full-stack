@@ -81,6 +81,7 @@ Complete the TODO sections in the main page component:
 Create a new API route that handles:
 
 #### POST /api/math-problem (Generate Problem)
+
 - Use Google's Gemini AI to generate a math word problem
 - The AI should return JSON with:
   ```json
@@ -93,6 +94,7 @@ Create a new API route that handles:
 - Return the problem and session ID to the frontend
 
 #### POST /api/math-problem/submit (Submit Answer)
+
 - Receive the session ID and user's answer
 - Check if the answer is correct
 - Use AI to generate personalized feedback based on:
@@ -105,13 +107,13 @@ Create a new API route that handles:
 
 ### 3. Requirements Checklist
 
-- [ ] AI generates appropriate Primary 5 level math problems
-- [ ] Problems and answers are saved to Supabase
-- [ ] User submissions are saved with feedback
-- [ ] AI generates helpful, personalized feedback
-- [ ] UI is clean and mobile-responsive
-- [ ] Error handling for API failures
-- [ ] Loading states during API calls
+- [✅] AI generates appropriate Primary 5 level math problems
+- [✅] Problems and answers are saved to Supabase
+- [✅] User submissions are saved with feedback
+- [✅] AI generates helpful, personalized feedback
+- [✅] UI is clean and mobile-responsive
+- [✅] Error handling for API failures
+- [✅] Loading states during API calls
 
 ## Deployment
 
@@ -126,33 +128,36 @@ Create a new API route that handles:
 
 When submitting your assessment, provide:
 
-1. **GitHub Repository URL**: Make sure it's public
-2. **Live Demo URL**: Your Vercel deployment
+1. **GitHub Repository URL**: [Make sure it's public](https://github.com/gabrieljosesc/ottodot-coding-task-full-stack)
+2. **Live Demo URL**: [Your Vercel deployment](https://vercel.com/gitara0724s-projects/task-manager-frontend)
 3. **Supabase Credentials**: Add these to your README for testing:
    ```
-   SUPABASE_URL: [Your Supabase Project URL]
-   SUPABASE_ANON_KEY: [Your Supabase Anon Key]
+   SUPABASE_URL: https://lunujyuvtvebnjxffrmp.supabase.co
+   SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1bnVqeXV2dHZlYm5qeGZmcm1wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA3NDQ5NDIsImV4cCI6MjA3NjMyMDk0Mn0.CQKpwUazBI_rzo4OZysu55YCnLzcsyokreWg4aqk_MU
    ```
 
 ## Implementation Notes
 
-*Please fill in this section with any important notes about your implementation, design decisions, challenges faced, or features you're particularly proud of.*
+_Please fill in this section with any important notes about your implementation, design decisions, challenges faced, or features you're particularly proud of._
 
 ### My Implementation:
 
-- 
-- 
-- 
+- Successfully integrated Google Gemini AI for dynamic problem generation
+- Implemented a two-step process: problem creation and answer validation with feedback
+- Designed a clean, educational UI that's suitable for Primary 5 students
+- Added comprehensive error handling and loading states
+- Created a hint system that provides scaffolding for learning
+- Built a complete full-stack application with proper database architecture
 
 ## Additional Features (Optional)
 
 If you have time, consider adding:
 
-- [ ] Difficulty levels (Easy/Medium/Hard)
-- [ ] Problem history view
+- [✅] Difficulty levels (Easy/Medium/Hard)
+- [✅] Problem history view
 - [ ] Score tracking
-- [ ] Different problem types (addition, subtraction, multiplication, division)
-- [ ] Hints system
+- [✅] Different problem types (addition, subtraction, multiplication, division)
+- [✅] Hints system
 - [ ] Step-by-step solution explanations
 
 ---
