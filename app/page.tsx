@@ -46,34 +46,6 @@ export default function Home() {
     }
   };
 
-  // const submitAnswer = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   // TODO: Implement answer submission logic
-  //   // This should call your API route to check the answer,
-  //   // save the submission, and generate feedback
-
-  //   if (!sessionId) return;
-  //   try {
-  //     setIsLoading(true);
-  //     const res = await fetch("/api/submit-answer", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         session_id: sessionId,
-  //         user_answer: Number(userAnswer),
-  //       }),
-  //     });
-  //     const data = await res.json();
-  //     setFeedback(data.submission.feedback_text);
-  //     setHint(data.submission.hint || "");
-  //     setIsCorrect(data.submission.is_correct);
-  //   } catch (err) {
-  //     alert("Failed to submit answer");
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
-
   const submitAnswer = async (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Implement answer submission logic
@@ -174,7 +146,6 @@ export default function Home() {
             </h2>
             <p className="text-gray-700 text-base mb-4">{feedback}</p>
 
-            {/* Show hint when answer is incorrect */}
             {!isCorrect && hint && (
               <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
                 <p className="text-sm text-blue-800">

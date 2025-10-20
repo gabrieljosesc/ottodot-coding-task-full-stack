@@ -17,22 +17,22 @@ export async function POST() {
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `
-Generate a Primary 5 level math word problem based on the Singapore syllabus.
-Return a clean JSON object ONLY, no extra text.
-Include:
-- problem_text
-- final_answer
-- difficulty ("easy", "medium", "hard")
-- problem_type (e.g., "fractions", "geometry", "multiplication")
+      Generate a Primary 5 level math word problem based on the Singapore syllabus.
+      Return a clean JSON object ONLY, no extra text.
+      Include:
+      - problem_text
+      - final_answer
+      - difficulty ("easy", "medium", "hard")
+      - problem_type (e.g., "fractions", "geometry", "multiplication")
 
-Example:
-{
-  "problem_text": "Mrs Tan baked some cookies...",
-  "final_answer": 72,
-  "difficulty": "medium",
-  "problem_type": "fractions"
-}
-`;
+      Example:
+      {
+        "problem_text": "Mrs Tan baked some cookies...",
+        "final_answer": 72,
+        "difficulty": "medium",
+        "problem_type": "fractions"
+      }
+      `;
 
     const result = await model.generateContent(prompt);
     const text = result.response.text().trim();
